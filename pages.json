@@ -1,0 +1,9 @@
+{
+  // ... 其他配置 ...
+  "globalStyle": {
+    // ... 其他全局样式配置 ...
+    "animationType": "fade-in",
+    "animationDuration": 1000
+  }
+  // ... 其他配置 ...
+}
