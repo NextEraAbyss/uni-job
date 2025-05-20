@@ -2,7 +2,7 @@
   "globalStyle": {
     "navigationStyle": "default",
     "navigationBarTitleText": "UniAppJob",
-    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarBackgroundColor": "#018d71",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#FFFFFF"
   },
