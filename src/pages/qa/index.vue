@@ -1,6 +1,9 @@
 <route lang="json5" type="page">
 {
-  style: { navigationBarTitleText: 'Q&A' },
+  style: {
+    navigationBarTitleText: 'Q&A',
+    enablePullDownRefresh: false,
+  },
 }
 </route>
 

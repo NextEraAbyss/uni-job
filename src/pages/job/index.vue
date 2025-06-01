@@ -180,14 +180,26 @@ const handleApply = (job: any) => {
 .job-page {
   height: 100%;
   min-height: 100vh;
-  padding-top: 250rpx; /* 调整为搜索区域的实际高度 */
+  /* #ifdef MP-WEIXIN */ /* 小程序中搜索区域高度 */
+  /* #endif */
+  /* #ifdef APP-PLUS */ /* App端状态栏高度 + 搜索区域高度 */
+  /* #endif */
+  /* #ifdef H5 */
+  padding-top: 250rpx; /* H5中包含导航栏的高度 */
+  /* #endif */
   padding-bottom: 20rpx; /* 为底部tabbar留出空间 */
   background-color: #f5f5f5;
 }
 /* 搜索容器 */
 .search-container {
   position: fixed;
-  top: 88rpx; /* uni-app默认导航栏高度约44px，转换为rpx约88rpx */
+  /* #ifdef MP-WEIXIN */ /* 小程序中直接从顶部开始 */
+  /* #endif */
+  /* #ifdef APP-PLUS */ /* App端状态栏高度，约22-44px */
+  /* #endif */
+  /* #ifdef H5 */
+  top: 0; /* H5中考虑导航栏高度 */
+  /* #endif */
   right: 0;
   left: 0;
   z-index: 100;
@@ -425,7 +437,7 @@ const handleApply = (job: any) => {
       font-weight: 600;
       color: #fff;
       background: linear-gradient(135deg, #018d71, #02a085);
-      border-radius: 12rpx;
+      border-radius: 50rpx;
       box-shadow: 0 4rpx 12rpx rgba(1, 141, 113, 0.2);
       transition: all 0.3s ease;
 

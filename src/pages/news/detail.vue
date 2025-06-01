@@ -38,11 +38,12 @@
 
 <script lang="ts" setup>
 import { onLoad } from '@dcloudio/uni-app'
-import { ref, watchEffect, computed } from 'vue'
+import { ref, watchEffect } from 'vue'
 import { getNewsDetailAPI, INewsItem } from '@/service/index/news'
-import { useQuery } from '@tanstack/vue-query'
+import useRequest from '@/hooks/useRequest'
 
 const newsDetail = ref<INewsItem>({} as INewsItem)
+const isLoading = ref(true)
 
 // 本地图片列表
 const localImages = [
@@ -62,29 +63,25 @@ const getRandomLocalImage = (): string => {
   return localImages[randomIndex]
 }
 
-let queryResult: any = null
-
 onLoad((options: any) => {
   const newsId = options.id
-  queryResult = useQuery({
-    queryKey: ['newsDetail', newsId],
-    queryFn: () => getNewsDetailAPI(newsId),
+
+  const { data, loading: requestLoading } = useRequest(() => getNewsDetailAPI(newsId), {
+    immediate: true,
   })
 
+  // 监听加载状态和数据
   watchEffect(() => {
-    if (queryResult.data.value) {
+    isLoading.value = requestLoading.value
+
+    if (data.value) {
       // 替换为随机本地图片
       newsDetail.value = {
-        ...queryResult.data.value.data,
+        ...data.value,
         image: getRandomLocalImage(),
       }
     }
   })
-})
-
-// 计算加载状态
-const isLoading = computed(() => {
-  return queryResult ? queryResult.isLoading.value : true
 })
 </script>
 

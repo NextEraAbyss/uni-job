@@ -77,29 +77,32 @@
 
 <script lang="ts" setup>
 import { onLoad } from '@dcloudio/uni-app'
-import { ref, watchEffect, computed } from 'vue'
+import { ref, watchEffect } from 'vue'
 import { getJobDetailAPI, IJobItem } from '@/service/index/job'
 import useRequest from '@/hooks/useRequest'
 
 const jobDetail = ref<IJobItem>({} as IJobItem)
-let requestResult: any = null
+const loading = ref(true)
 
 onLoad((options: any) => {
   const jobId = options.id
-  requestResult = useRequest(() => getJobDetailAPI(jobId), {
+
+  const {
+    data,
+    loading: requestLoading,
+    run,
+  } = useRequest(() => getJobDetailAPI(jobId), {
     immediate: true,
   })
 
+  // 监听加载状态
   watchEffect(() => {
-    if (requestResult.data.value) {
-      jobDetail.value = requestResult.data.value
+    loading.value = requestLoading.value
+
+    if (data.value) {
+      jobDetail.value = data.value
     }
   })
-})
-
-// 获取加载状态
-const loading = computed(() => {
-  return requestResult ? requestResult.loading.value : true
 })
 
 const handleApply = () => {

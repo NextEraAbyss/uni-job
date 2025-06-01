@@ -1,6 +1,9 @@
 <route lang="json5" type="page">
 {
-  style: { navigationBarTitleText: '企业介绍' },
+  style: {
+    navigationBarTitleText: '企业介绍',
+    enablePullDownRefresh: false,
+  },
 }
 </route>
 

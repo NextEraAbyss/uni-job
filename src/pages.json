@@ -54,7 +54,8 @@
       "path": "pages/company/index",
       "type": "page",
       "style": {
-        "navigationBarTitleText": "企业介绍"
+        "navigationBarTitleText": "企业介绍",
+        "enablePullDownRefresh": false
       }
     },
     {
@@ -89,7 +90,8 @@
       "path": "pages/qa/index",
       "type": "page",
       "style": {
-        "navigationBarTitleText": "Q&A"
+        "navigationBarTitleText": "Q&A",
+        "enablePullDownRefresh": false
       }
     }
   ],
