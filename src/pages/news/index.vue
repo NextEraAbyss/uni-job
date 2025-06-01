@@ -19,7 +19,7 @@
           <view class="news-title">{{ item.title }}</view>
           <view class="news-desc">{{ item.description }}</view>
           <view class="news-info">
-            <text class="news-time">{{ item.time }}</text>
+            <text class="news-time">{{ item.updated_at }}</text>
           </view>
         </view>
       </view>
@@ -28,10 +28,29 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 import { getNewsListAPI, INewsItem, INews } from '@/service/index/news'
 import useRequest from '@/hooks/useRequest'
+
 const newsList = ref<INewsItem[]>([])
+
+// 本地图片列表
+const localImages = [
+  '/static/images/news1.jpg',
+  '/static/images/news2.jpg',
+  '/static/images/news3.jpg',
+  '/static/images/news4.jpg',
+  '/static/images/news5.jpg',
+  '/static/images/company-banner1.jpg',
+  '/static/images/company-banner2.jpg',
+  '/static/images/company-banner3.jpg',
+]
+
+// 随机获取本地图片函数
+const getRandomLocalImage = (): string => {
+  const randomIndex = Math.floor(Math.random() * localImages.length)
+  return localImages[randomIndex]
+}
 
 // 处理新闻点击事件
 const handleNewsClick = (item: INewsItem) => {
@@ -47,7 +66,11 @@ const { loading, error, data, run } = useRequest<INews>(() => getNewsListAPI(), 
 
 watchEffect(() => {
   if (data.value) {
-    newsList.value = data.value.items
+    // 为每条新闻分配随机本地图片
+    newsList.value = data.value.items.map((item) => ({
+      ...item,
+      image: getRandomLocalImage(),
+    }))
   }
 })
 </script>

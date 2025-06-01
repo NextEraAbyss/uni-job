@@ -25,6 +25,24 @@ import { useQuery } from '@tanstack/vue-query'
 
 const newsDetail = ref<INewsItem>({} as INewsItem)
 
+// 本地图片列表
+const localImages = [
+  '/static/images/news1.jpg',
+  '/static/images/news2.jpg',
+  '/static/images/news3.jpg',
+  '/static/images/news4.jpg',
+  '/static/images/news5.jpg',
+  '/static/images/company-banner1.jpg',
+  '/static/images/company-banner2.jpg',
+  '/static/images/company-banner3.jpg',
+]
+
+// 随机获取本地图片函数
+const getRandomLocalImage = (): string => {
+  const randomIndex = Math.floor(Math.random() * localImages.length)
+  return localImages[randomIndex]
+}
+
 onLoad((options: any) => {
   const newsId = options.id
   const { data } = useQuery({
@@ -34,7 +52,11 @@ onLoad((options: any) => {
 
   watchEffect(() => {
     if (data.value) {
-      newsDetail.value = data.value.data
+      // 替换为随机本地图片
+      newsDetail.value = {
+        ...data.value.data,
+        image: getRandomLocalImage(),
+      }
     }
   })
 })
