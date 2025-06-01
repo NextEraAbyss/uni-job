@@ -3,9 +3,9 @@ import { defineUniPages } from '@uni-helper/vite-plugin-uni-pages'
 export default defineUniPages({
   globalStyle: {
     navigationStyle: 'default',
-    navigationBarTitleText: 'UniAppJob',
-    navigationBarBackgroundColor: '#f8f8f8',
-    navigationBarTextStyle: 'black',
+    navigationBarTitleText: 'uni-job',
+    navigationBarBackgroundColor: '#018d71',
+    navigationBarTextStyle: 'white',
     backgroundColor: '#FFFFFF',
   },
   easycom: {
