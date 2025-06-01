@@ -1,19 +1,17 @@
 {
-  "name": "uni-app-job",
+  "name": "uni-job",
   "type": "commonjs",
-  "version": "2.5.5",
-  "description": "UniAppJob",
+  "version": "1.0.0",
+  "description": "uni-job - 现代化企业招聘管理平台，基于 Vue3 + TypeScript + Uni-App 的跨端企业招聘系统",
   "license": "MIT",
-  "repository": "https://github.com/feige996/UniAppJob",
-  "repository-gitee": "https://gitee.com/feige996/UniAppJob",
-  "repository-deprecated": "https://github.com/codercup/UniAppJob",
+  "repository": "https://github.com/NextEraAbyss/uni-job",
   "bugs": {
-    "url": "https://github.com/feige996/UniAppJob/issues"
+    "url": "https://github.com/NextEraAbyss/uni-job/issues"
   },
-  "homepage": "https://feige996.github.io/UniAppJob/",
+  "homepage": "https://NextEraAbyss.github.io/uni-job/",
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=7.30"
+    "node": ">=18.0.0",
+    "pnpm": ">=7.30.0"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -63,7 +61,12 @@
     "prepare": "git init && husky install",
     "type-check": "vue-tsc --noEmit",
     "cz": "czg",
-    "openapi-ts-request": "openapi-ts"
+    "openapi-ts-request": "openapi-ts",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "lint:style": "stylelint **/*.{vue,css,scss,html} --fix",
+    "format": "prettier --write .",
+    "clean": "rimraf dist node_modules/.cache",
+    "info": "npx envinfo --system --npmPackages --binaries --browsers"
   },
   "lint-staged": {
     "**/*.{html,vue,ts,cjs,json,md}": [

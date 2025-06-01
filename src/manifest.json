@@ -1,7 +1,7 @@
 {
-  "name": "UniAppJob",
+  "name": "uni-job - 现代化企业招聘管理平台",
   "appid": "__UNI__35B511F",
-  "description": "",
+  "description": "uni-job - 现代化企业招聘管理平台，基于 Vue3 + TypeScript + Uni-App 的跨端企业招聘系统，支持H5/小程序/App多端部署",
   "versionName": "1.0.0",
   "versionCode": "100",
   "transformPx": false,
@@ -103,6 +103,7 @@
     "enable": false
   },
   "vueVersion": "3",
+  "locale": "zh-Hans",
   "h5": {
     "router": {
       "base": "/",

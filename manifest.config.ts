@@ -14,13 +14,14 @@ const {
 } = env
 
 export default defineManifestConfig({
-  name: VITE_APP_TITLE,
+  name: VITE_APP_TITLE || 'uni-job - 现代化企业招聘管理平台',
   appid: VITE_UNI_APPID,
-  description: '',
+  description:
+    'uni-job - 现代化企业招聘管理平台，基于 Vue3 + TypeScript + Uni-App 的跨端企业招聘系统，支持H5/小程序/App多端部署',
   versionName: '1.0.0',
   versionCode: '100',
   transformPx: false,
-  locale: VITE_FALLBACK_LOCALE, // 'zh-Hans'
+  locale: VITE_FALLBACK_LOCALE || 'zh-Hans',
   h5: {
     router: {
       base: VITE_APP_PUBLIC_BASE,
