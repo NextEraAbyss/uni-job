@@ -1,4 +1,4 @@
-# UniAppJob - 🚀 现代化企业招聘管理平台
+# uni-job - 🚀 现代化企业招聘管理平台
 
 > 基于 Vue3 + TypeScript + Uni-App 的跨端企业招聘系统 | 支持H5/小程序/App多端部署 | 现代化UI设计 | 高性能优化
 
@@ -10,7 +10,7 @@
 
 ## 📖 项目简介 | Project Overview
 
-UniAppJob 是一个现代化的企业招聘管理平台，采用 Vue3 + TypeScript + Uni-App 技术栈开发，支持一套代码多端部署。系统提供完整的招聘流程管理，包括职位发布、简历管理、企业展示等核心功能，致力于为企业提供高效便捷的招聘解决方案。
+uni-job 是一个现代化的企业招聘管理平台，采用 Vue3 + TypeScript + Uni-App 技术栈开发，支持一套代码多端部署。系统提供完整的招聘流程管理，包括职位发布、简历管理、企业展示等核心功能，致力于为企业提供高效便捷的招聘解决方案。
 
 ### 🎯 适用场景
 
@@ -117,8 +117,8 @@ HBuilderX              # Uni-App官方IDE
 
 ```bash
 # 使用 Git 克隆
-git clone https://github.com/feige996/UniAppJob.git
-cd UniAppJob
+git clone https://github.com/NextEraAbyss/uni-job.git
+cd uni-job
 
 # 或者下载压缩包解压
 ```
@@ -170,7 +170,7 @@ pnpm build
 ## 📁 项目结构 | Project Structure
 
 ```
-UniAppJob/
+uni-job/
 ├── src/                        # 源代码目录
 │   ├── components/             # 公共组件
 │   │   ├── common/             # 通用组件
@@ -342,7 +342,7 @@ vercel --prod
 server {
     listen 80;
     server_name your-domain.com;
-    root /var/www/uniappjob;
+    root /var/www/uni-job;
     index index.html;
 
     # 开启Gzip压缩
@@ -444,13 +444,13 @@ git commit -m "fix: 修复职位详情页面样式问题"
 
 ### 🐛 问题反馈
 
-- 在 [Issues](https://github.com/feige996/UniAppJob/issues) 中报告bug
+- 在 [Issues](https://github.com/NextEraAbyss/uni-job/issues) 中报告bug
 - 提供详细的重现步骤和环境信息
 - 附上相关的错误截图或日志
 
 ### 💡 功能建议
 
-- 在 [Issues](https://github.com/feige996/UniAppJob/issues) 中提出新功能建议
+- 在 [Issues](https://github.com/NextEraAbyss/uni-job/issues) 中提出新功能建议
 - 详细描述功能需求和使用场景
 - 讨论实现方案的可行性
 
@@ -492,7 +492,7 @@ git push origin feature/your-feature-name
 ```
 MIT License
 
-Copyright (c) 2024 UniAppJob
+Copyright (c) 2024 uni-job
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
