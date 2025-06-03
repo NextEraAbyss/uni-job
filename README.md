@@ -471,47 +471,18 @@ git push origin feature/your-feature-name
 # 5. 创建 Pull Request
 ```
 
-### 📖 文档贡献
-
-- 完善项目文档
-- 修正文档中的错误
-- 翻译文档到其他语言
-
-## 📊 项目统计 | Project Stats
-
-- 🌟 **Stars**: 持续增长中
-- 🍴 **Forks**: 欢迎Fork和贡献
-- 📦 **Dependencies**: 保持最新稳定版本
-- 🔄 **Updates**: 定期更新和维护
-- 🐛 **Issues**: 积极响应和处理
-
 ## 📄 许可证 | License
 
 本项目采用 [MIT License](./LICENSE) 开源协议。
 
-```
-MIT License
-
-Copyright (c) 2024 uni-job
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-```
-
 ## 🔗 相关链接 | Links
 
-- 📚 **官方文档**: [Uni-App文档](https://uniapp.dcloud.net.cn/)
-- 🛠️ **Vue3文档**: [Vue.js](https://vuejs.org/)
-- 🎨 **UI组件**: [Wot Design Uni](https://wot-design-uni.gitee.io/guide/)
-- 🔧 **构建工具**: [Vite](https://vitejs.dev/)
-- 📦 **包管理**: [pnpm](https://pnpm.io/)
+- 🌐 **个人网站**: [cv.wat.ink](https://cv.wat.ink)
+- 📝 **技术博客**: [blog.wat.ink](https://blog.wat.ink)
+- 🛠️ **管理后台**: [admin.wat.ink](https://admin.wat.ink)
+- 🔌 **API文档**: [api.wat.ink](https://api.wat.ink)
+- 👨‍💻 **GitHub**: [@NextEraAbyss](https://github.com/NextEraAbyss)
+- 🦄 **Gitee**: [@NextEraAbyss](https://gitee.com/NextEraAbyss)
 
 ---
 
